@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather ComparisonBetween Two Cities</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Weather Comparison Between Two Cities</h1>
+        <p>Compare the current weather in Mississauga and Mumbai.</p>
+    </header>
+
+    <main>
+        <section class="weather-card">
+            <h2>Check the Weather</h2>
+
+            <label for="city-select">Choose a city:</label>
+
+            <div class="controls">
+                <select id="city-select">
+                    <option value="Mississauga">Mississauga, Canada</option>
+                    <option value="Mumbai">Mumbai, India</option>
+                </select>
+
+                <button id="check-button">Get Weather</button>
+            </div>
+
+            <p id="status" role="status">Loading weather...</p>
+
+            <h3 id="city-name">Mississauga</h3>
+            <p id="temperature">--°C</p>
+
+            <div class="weather-details">
+                <p id="precipitation">Precipitation: -- mm</p>
+                <p id="cloud-cover">Cloud cover: --%</p>
+            </div>
+
+            <p class="bar-label">Cloud Cover</p>
+
+            <div class="bar-track" aria-hidden="true">
+                <div id="cloud-bar"></div>
+            </div>
+
+            <p id="weather-message">
+                A weather suggestion will appear here.
+            </p>
+
+            <p id="updated-time"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Weather data from
+            <a href="https://open-meteo.com/"
+               target="_blank"
+               rel="noopener noreferrer">Open-Meteo</a>.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
