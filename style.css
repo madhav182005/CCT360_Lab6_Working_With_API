@@ -1,0 +1,13 @@
+/* Main page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263643;
+    background-color: #edf2f6;
+    transition: background-color 0.4s;
+}
