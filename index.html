@@ -20,7 +20,7 @@
     <main>
         <section class="weather-card">
             <h2>Check the Weather</h2>
-
+            <!-- The Label for city select helps the audience select a specific city from the options -->
             <label for="city-select">Choose a city:</label>
 
             <div class="controls">
@@ -28,27 +28,27 @@
                     <option value="Mississauga">Mississauga, Canada</option>
                     <option value="Mumbai">Mumbai, India</option>
                 </select>
-
+                <!-- The check-button id helps with the weather checking functionality and API requests -->
                 <button id="check-button">Get Weather</button>
             </div>
 
             <p id="status" role="status">Loading weather...</p>
 
             <h3 id="city-name">Mississauga</h3>
-            <p id="temperature">--°C</p>
+            <p id="temperature">--°C</p> <!-- Temperature id helps display the returned value of the temperature. The --°C is initially displayed until JS updates the reported temperature -->
 
             <div class="weather-details">
-                <p id="precipitation">Precipitation: -- mm</p>
-                <p id="cloud-cover">Cloud cover: --%</p>
+                <p id="precipitation">Precipitation: -- mm</p> <!-- Precipitation id helps display the returned value of the precipitation -->
+                <p id="cloud-cover">Cloud cover: --%</p> <!-- Cloud cover id helps display the returned value of the cloud cover -->
             </div>
 
             <p class="bar-label">Cloud Cover</p>
 
             <div class="bar-track" aria-hidden="true">
-                <div id="cloud-bar"></div>
+                <div id="cloud-bar"></div> <!-- Cloud bar id helps display the cloud cover as a visual indicator and makes changes related to this if and when required -->
             </div>
 
-            <p id="weather-message">
+            <p id="weather-message"> <!-- This id is used to display and showcase the weather suggestion -->
                 A weather suggestion will appear here.
             </p>
 
@@ -65,7 +65,7 @@
         </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 
 </body>
 </html>
