@@ -18,9 +18,10 @@
     </header>
 
     <main>
+<!-- This section includes the main weather information and the elements that JS will update after receiving data from the API. -->
         <section class="weather-card">
             <h2>Check the Weather</h2>
-            <!-- The Label for city select helps the audience select a specific city from the options -->
+<!-- The label is connected to the dropdown using the for and id attributes. The user can choose between Mississauga and Mumbai, and JS reads the selected value to decide which city's weather to retrieve. -->
             <label for="city-select">Choose a city:</label>
 
             <div class="controls">
@@ -28,22 +29,23 @@
                     <option value="Mississauga">Mississauga, Canada</option>
                     <option value="Mumbai">Mumbai, India</option>
                 </select>
-                <!-- The check-button id helps with the weather checking functionality and API requests -->
+<!-- The check-button id helps with the weather checking functionality and API requests. JS uses its id to connect it to a click event. -->
                 <button id="check-button">Get Weather</button>
             </div>
 
             <p id="status" role="status">Loading weather...</p>
 
+<!-- These elements contain default values at first. Once the API responds, JS replaces them with the city name, temperature and other values. -->
             <h3 id="city-name">Mississauga</h3>
-            <p id="temperature">--°C</p> <!-- Temperature id helps display the returned value of the temperature. The --°C is initially displayed until JS updates the reported temperature -->
+            <p id="temperature">--°C</p> <!--  The --°C is initially displayed until JS updates the reported temperature -->
 
             <div class="weather-details">
-                <p id="precipitation">Precipitation: -- mm</p> <!-- Precipitation id helps display the returned value of the precipitation -->
+                <p id="precipitation">Precipitation: -- mm</p> <!-- This id displays the returned value of the precipitation -->
                 <p id="cloud-cover">Cloud cover: --%</p> <!-- Cloud cover id helps display the returned value of the cloud cover -->
             </div>
+                <p class="bar-label">Cloud Cover</p>
 
-            <p class="bar-label">Cloud Cover</p>
-
+<!-- This is the visual representation of cloud cover. The outer div acts as the background of the bar, while JS changes the width of the inner div based on the cloud cover percentage. -->
             <div class="bar-track" aria-hidden="true">
                 <div id="cloud-bar"></div> <!-- Cloud bar id helps display the cloud cover as a visual indicator and makes changes related to this if and when required -->
             </div>

@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+/* Helps set the main font, text colour, and default background of the webpage. It smoothly changes the background color based on the weather conditions. */
 body {
     margin: 0;
     min-height: 100vh;
@@ -38,12 +39,14 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* Limiting the width of the main content so the weather information is in the centre and doesn't stretch to the full screen. */
 main {
     max-width: 700px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* The weather card groups all the main information in one section.*/
 .weather-card {
     padding: 30px;
     background-color: white;
@@ -52,6 +55,7 @@ main {
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
 }
 
+/* The flexbox helps keep the city dropdown and Get Weather button next to each other with a small differentiable gap. */
 .controls {
     display: flex;
     gap: 10px;
@@ -81,6 +85,7 @@ button:hover {
     background-color: #173852;
 }
 
+/* This styling is used while the API request is loading. JS temporarily disables the button to prevent multiple clicks and requests. */
 button:disabled {
     opacity: 0.6;
     cursor: wait;
@@ -113,6 +118,7 @@ button:disabled {
     font-weight: bold;
 }
 
+/* The bar track represents the full 100% width of cloud cover. The inner bar's width is dynamically updated by JS based on the cloud cover percentage returned by the API. */
 .bar-track {
     width: 100%;
     height: 22px;
@@ -121,6 +127,7 @@ button:disabled {
     overflow: hidden;
 }
 
+/* The blue bar initially starts at 0% width. JS updates its width using the cloud cover value from the API, so a higher percentage makes a longer blue bar. */
 #cloud-bar {
     width: 0%;
     height: 100%;
@@ -142,3 +149,4 @@ footer {
 footer a {
     color: #244e72;
 }
+
